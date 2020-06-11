@@ -24,7 +24,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <ImageView
             android:id="@+id/imageView2"
@@ -40,9 +41,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
-            android:text="L O G I N"
+            android:text="R E G I S T E R"
             android:textColor="@color/grey"
             android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedframe"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Nama"
+            android:textColor="@color/gold" />
 
         <EditText
             android:id="@+id/email_input"
@@ -73,39 +88,27 @@
             android:textColor="@color/gold" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttondaftar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
             android:background="@drawable/roundedbutton"
-            android:text="MASUK"
+            android:text="DAFTAR"
             android:textColor="@color/grey" />
 
-        <LinearLayout
+
+        <TextView
+            android:id="@+id/termandcondition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="50dp">
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:text="@string/terms"
+            android:textColor="@color/grey"
+            android:layout_gravity="center_horizontal"/>
 
-            <TextView
-                android:id="@+id/signupConfirm_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Belum punya akun ? Silahkan "
-                android:textColor="@color/grey"/>
 
-            <TextView
-                android:id="@+id/buttonToSignup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Daftar"
-                android:textColor="@color/gold"/>
-
-        </LinearLayout>
 
 
     </LinearLayout>
