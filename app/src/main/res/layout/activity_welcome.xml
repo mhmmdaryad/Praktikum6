@@ -39,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DAFTAR"
+            android:onClick="daftar"
             android:textColor="@color/gold"
             android:layout_margin="50dp"
             android:background="@drawable/roundedbuttongold"/>
@@ -48,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LOGIN"
+            android:onClick="login"
             android:textColor="@color/grey"
             android:background="@drawable/roundedbutton"/>
     </LinearLayout>
