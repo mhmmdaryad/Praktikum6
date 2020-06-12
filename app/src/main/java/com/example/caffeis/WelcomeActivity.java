@@ -20,7 +20,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public void login(View view) {
         Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
-        startActivity(intent);
+        startActivity(intent );
     }
 }
 
