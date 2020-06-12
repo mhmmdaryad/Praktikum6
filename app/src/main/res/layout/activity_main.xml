@@ -16,13 +16,34 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="68dp"
-            android:layout_height="78dp"
-            android:layout_marginTop="28dp"
-            app:srcCompat="@drawable/logo"
-            android:layout_gravity="center_horizontal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="78dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
+                app:srcCompat="@drawable/logo" />
+
+            <Button
+                android:id="@+id/button_cart"
+                android:layout_width="100dp"
+                android:layout_height="76dp"
+                android:background="@drawable/ic_cart"
+                android:layout_marginStart=""/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
@@ -212,6 +233,7 @@
 
         </LinearLayout>
     </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
