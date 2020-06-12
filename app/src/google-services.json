@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "993377496431",
+    "firebase_url": "https://caffeis-ef3b0.firebaseio.com",
+    "project_id": "caffeis-ef3b0",
+    "storage_bucket": "caffeis-ef3b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993377496431:android:e3baf33b291c36a5d00c9a",
+        "android_client_info": {
+          "package_name": "com.example.caffeis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993377496431-mbap5du54lmbggaoefvh4qejghval9r1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.caffeis",
+            "certificate_hash": "6f2f0d16bfa8c59b3f0cc56f67b02b52a7e470be"
+          }
+        },
+        {
+          "client_id": "993377496431-9adtptg877bujfavfen7l98g8g9venco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi4jOdaNkqZJbXvoVhX20pCU77rRf6lbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993377496431-9adtptg877bujfavfen7l98g8g9venco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
