@@ -3,6 +3,7 @@ package com.example.caffeis;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.TextureView;
 import android.widget.Button;
@@ -20,12 +21,13 @@ import com.squareup.picasso.Picasso;
 import model.Food;
 
 public class FoodDetail extends AppCompatActivity {
-    TextView food_name, food_price;
-    ImageView food_image;
+
+    ImageView foto;
     ElegantNumberButton numberButton;
     Button btnSubmit;
 
-    String foodId="";
+    String harga = "", nama = "";
+
     FirebaseDatabase database;
     DatabaseReference foods;
 
@@ -33,43 +35,22 @@ public class FoodDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_detail);
-        //Firebase
-        database = FirebaseDatabase.getInstance();
-        foods= database.getReference("Foods");
 
         //init view
+        numberButton = (ElegantNumberButton) findViewById(R.id.jumlah_menu);
+        btnSubmit = (Button) findViewById(R.id.buttonpesan);
 
-        numberButton= (ElegantNumberButton) findViewById(R.id.jumlah_menu);
-        btnSubmit= (Button)findViewById(R.id.buttonpesan);
+        Intent intent = getIntent();
+        harga = intent.getStringExtra("Harga");
+        nama = intent.getStringExtra("Nama");
+        foto = findViewById(R.id.image_menu);
 
-        food_name=(TextView)findViewById(R.id.nama_menu);
-        food_price=(TextView)findViewById(R.id.textharga);
-        food_image=(ImageView)findViewById(R.id.image_menu);
+        TextView textNama = (TextView) findViewById(R.id.nama_menu);
+        textNama.setText(nama);
 
-        if (getIntent()!= null){
-            foodId=getIntent().getStringExtra("FoodId");
-            if(!foodId.isEmpty()){
-                getDetailFood(foodId);
-            }
-        }
-    }
+        TextView textHarga = (TextView) findViewById(R.id.textharga);
+        textHarga.setText(harga);
 
-    private void getDetailFood(String foodId) {
-        foods.child(foodId);
-        foods.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Food food = dataSnapshot.getValue(Food.class);
-
-                Picasso.get().load(food.getImage()).into(food_image);
-                food_price.setText(food.getPrice());
-                food_name.setText(food.getName());
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        foto.setImageResource(intent.getIntExtra("foto",0));
     }
 }

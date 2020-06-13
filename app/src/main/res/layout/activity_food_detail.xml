@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="80dp"
-            android:text="MARTABAK"
+            android:text="@string/nama_menu"
             android:textColor="@color/gold"
             android:textSize="24dp"
             android:textStyle="bold"/>
@@ -40,7 +40,6 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             app:cardCornerRadius="300dp"
-            app:cardBackgroundColor="@drawable/roundedbuttongold"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             >
@@ -49,7 +48,8 @@
                 android:id="@+id/image_menu"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:src="@drawable/kopisusu">
 
             </ImageView>
 
@@ -76,6 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
+                android:text="@string/textHarga"
                 android:textColor="@color/grey"
                 android:textStyle="bold"/>
         </LinearLayout>
