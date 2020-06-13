@@ -9,15 +9,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
-    int kopi = 1, kentang = 2, roti = 3, martabak = 4, boba = 5;
+
     LinearLayout btnkopi, btnkentang, btnroti, btnmartabak, btnboba;
+
+    FirebaseDatabase database;
+    DatabaseReference foodlist;
 
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        database = FirebaseDatabase.getInstance();
+        foodlist = database.getReference("Foods");
 
         btnkopi = (LinearLayout) findViewById(R.id.coffe);
         btnkentang = (LinearLayout) findViewById(R.id.kentang);
@@ -30,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", 1);
+                foodDetail.putExtra("MenuId", 1);
             }
         });
         btnkentang.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", 2);
+                foodDetail.putExtra("MenuId", 2);
             }
         });
         btnroti.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", 3);
+                foodDetail.putExtra("MenuId", 3);
             }
         });
         btnmartabak.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", 4);
+                foodDetail.putExtra("MenuId", 4);
             }
         });
         btnboba.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", 5);
+                foodDetail.putExtra("MenuId", 5);
             }
         });
 

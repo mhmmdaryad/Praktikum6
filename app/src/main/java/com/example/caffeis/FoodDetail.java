@@ -47,7 +47,7 @@ public class FoodDetail extends AppCompatActivity {
         food_image=(ImageView)findViewById(R.id.image_menu);
 
         if (getIntent()!= null){
-            foodId=getIntent().getStringExtra("FoodId");
+            foodId=getIntent().getStringExtra("MenuId");
             if(foodId!=null){
                 getDetailFood(foodId);
             }
