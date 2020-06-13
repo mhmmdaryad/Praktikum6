@@ -1,5 +1,6 @@
 <application>
   <component name="IntentionManagerSettings">
     <ignoreAction name="Dart/Quick assist powered by the Dart Analysis Server" />
+    <ignoreAction name="Java/Other/Put arguments on separate lines" />
   </component>
 </application>
