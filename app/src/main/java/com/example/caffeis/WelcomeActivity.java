@@ -20,14 +20,16 @@ public class WelcomeActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_login);
+                Intent LoginActivity = new Intent(WelcomeActivity.this, LoginActivity.class);
+                startActivity(LoginActivity);
             }
         });
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_signup);
+                Intent SignUpActivity = new Intent(WelcomeActivity.this, SignupActivity.class);
+                startActivity(SignUpActivity);
             }
         });
     }

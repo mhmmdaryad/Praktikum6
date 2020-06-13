@@ -1,17 +1,16 @@
 package model;
 
-public class user {
+public class User {
     private String Name;
     private String Password;
-    private String Email;
 
-    public user(){
+    public User(){
 
     }
-    public user(String name, String password, String email) {
+    public User(String name, String password) {
         Name = name;
         Password = password;
-        Email = email;
+
     }
 
     public String getName() {
@@ -30,11 +29,4 @@ public class user {
         Password = password;
     }
 
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
 }
