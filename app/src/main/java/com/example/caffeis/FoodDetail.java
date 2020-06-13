@@ -43,7 +43,6 @@ public class FoodDetail extends AppCompatActivity {
         Intent intent = getIntent();
         harga = intent.getStringExtra("Harga");
         nama = intent.getStringExtra("Nama");
-        foto = findViewById(R.id.image_menu);
 
         TextView textNama = (TextView) findViewById(R.id.nama_menu);
         textNama.setText(nama);
@@ -51,6 +50,17 @@ public class FoodDetail extends AppCompatActivity {
         TextView textHarga = (TextView) findViewById(R.id.textharga);
         textHarga.setText(harga);
 
-        foto.setImageResource(intent.getIntExtra("foto",0));
+        ImageView cetakFoto=(ImageView) findViewById(R.id.image_menu);
+        if (intent.getStringExtra("Foto").equals("1")) {
+            cetakFoto.setImageResource(R.drawable.kopisusu);
+        }else  if (intent.getStringExtra("Foto").equals("2")) {
+            cetakFoto.setImageResource(R.drawable.kentanggoreng);
+        }else  if (intent.getStringExtra("Foto").equals("3")) {
+            cetakFoto.setImageResource(R.drawable.roti);
+        }else  if (intent.getStringExtra("Foto").equals("4")) {
+            cetakFoto.setImageResource(R.drawable.martabak);
+        }else  if (intent.getStringExtra("Foto").equals("5")) {
+            cetakFoto.setImageResource(R.drawable.boba);
+        }
     }
 }

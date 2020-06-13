@@ -6,6 +6,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 foodDetail.putExtra("Nama", "Es Kopi Susu");
                 foodDetail.putExtra("Harga", "15000");
-                foodDetail.putExtra("Foto", images[0]);
+                foodDetail.putExtra("Foto", "1");
                 startActivity(foodDetail);
             }
         });
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 foodDetail.putExtra("Nama", "Kentang Goreng");
                 foodDetail.putExtra("Harga", "20000");
-                foodDetail.putExtra("Foto", images[1]);
+                foodDetail.putExtra("Foto", "2");
                 startActivity(foodDetail);
             }
         });
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 foodDetail.putExtra("Nama", "Roti Bakar");
                 foodDetail.putExtra("Harga", "12000");
-                foodDetail.putExtra("Foto", "Es Kopi Susu");
+                foodDetail.putExtra("Foto", "3");
                 startActivity(foodDetail);
             }
         });
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 foodDetail.putExtra("Nama", "Martabak");
                 foodDetail.putExtra("Harga", "25000");
-                foodDetail.putExtra("Foto", "Es Kopi Susu");
+                foodDetail.putExtra("Foto", "4");
                 startActivity(foodDetail);
             }
         });
@@ -95,11 +97,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 foodDetail.putExtra("Nama", "Es Boba");
                 foodDetail.putExtra("Harga", "22000");
-                foodDetail.putExtra("Foto", "Es Kopi Susu");
+                foodDetail.putExtra("Foto", "5");
                 startActivity(foodDetail);
             }
         });
-
     }
 
 }
