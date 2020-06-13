@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
     int kopi = 1, kentang = 2, roti = 3, martabak = 4, boba = 5;
     LinearLayout btnkopi, btnkentang, btnroti, btnmartabak, btnboba;
+    Button lokasi;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -24,7 +25,15 @@ public class MainActivity extends AppCompatActivity {
         btnroti = (LinearLayout) findViewById(R.id.roti);
         btnmartabak = (LinearLayout) findViewById(R.id.martabak);
         btnboba = (LinearLayout) findViewById(R.id.boba);
+        lokasi = (Button)findViewById(R.id.button4);
 
+        lokasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                        Intent MapsActivity = new Intent(MainActivity.this, MapsActivity.class);
+                        startActivity(MapsActivity);
+                    }
+                });
         btnkopi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
