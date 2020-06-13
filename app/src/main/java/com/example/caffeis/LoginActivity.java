@@ -3,6 +3,7 @@ package com.example.caffeis;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,10 +16,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import model.user;
+import model.User;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText email, password;
+    EditText Number, password;
     Button button;
 
     @Override
@@ -26,12 +27,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        email = findViewById(R.id.email_input);
+        Number = findViewById(R.id.usernumber);
         password = findViewById(R.id.text_input_password_toggle);
         button = (Button)findViewById(R.id.button);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference table_user = database.getReference("user");
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference table_user = database.getReference("User");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,16 +44,24 @@ public class LoginActivity extends AppCompatActivity {
 
                 table_user.addValueEventListener(new ValueEventListener() {
                     @Override
+
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.child(email.getText().toString()).exists()) {
+                        if (dataSnapshot.child(Number.getText().toString()).exists()) {
                             mDialog.dismiss();
-                            user user = dataSnapshot.child(email.getText().toString()).getValue(user.class);
+
+                            User user = dataSnapshot.child(Number.getText().toString()).getValue(User.class);
+
                             if (user.getPassword().equals(password.getText().toString())) {
-                                Toast.makeText(LoginActivity.this, "log in Succesfully !", Toast.LENGTH_SHORT).show();
-                            } else
+                                {
+                                    Intent HomeActivity = new Intent(LoginActivity.this, HomeActivity.class);
+                                    startActivity(HomeActivity);
+                                }
+                            } else {
                                 Toast.makeText(LoginActivity.this, "log in failed", Toast.LENGTH_SHORT).show();
+                            }
                         }
                         else {
+                            mDialog.dismiss();
                             Toast.makeText(LoginActivity.this, "User not Exist", Toast.LENGTH_SHORT).show();
                         }
                     }
