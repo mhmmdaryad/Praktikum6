@@ -2,4 +2,8 @@
     <string name="app_name">caffeis</string>
     <string name="terms"><u>Syarat dan Ketentuan</u>.</string>
     <string name="title_activity_maps">Map</string>
+    <string name="nama_menu">nama_menu</string>
+    <string name="textHome">Home</string>
+    <string name="textHarga"></string>
+    <string name="textFoto"></string>
 </resources>
