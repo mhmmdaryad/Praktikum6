@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                             mDialog.dismiss();
 
                             User user = dataSnapshot.child(Number.getText().toString()).getValue(User.class);
+                            user.setPhone(Number.getText().toString());
 
                             if (user.getPassword().equals(password.getText().toString())) {
                                 {

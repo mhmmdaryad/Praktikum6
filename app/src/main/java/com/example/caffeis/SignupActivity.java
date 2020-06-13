@@ -52,7 +52,7 @@ public class SignupActivity extends AppCompatActivity {
                         }
                         else {
                             mDialog.dismiss();
-                            User user = new User(Password.getText().toString(), Name.getText().toString());
+                            User user = new User(Password.getText().toString(), Name.getText().toString(), Number.getText().toString());
                             table_user.child(Number.getText().toString()).setValue(user);
                             Toast.makeText(SignupActivity.this, "Usernumber successfully register",Toast.LENGTH_SHORT).show();
                             finish();

@@ -36,7 +36,7 @@
             android:background="@drawable/roundedframe"></LinearLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttoncheckout"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"

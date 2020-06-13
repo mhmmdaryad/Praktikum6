@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout btnkopi, btnkentang, btnroti, btnmartabak, btnboba;
     Button lokasi;
+    Button chart;
 
     FirebaseDatabase database;
     DatabaseReference foodlist;
@@ -42,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
         btnboba = (LinearLayout) findViewById(R.id.boba);
 
         lokasi = (Button) findViewById(R.id.button4);
+        chart = (Button) findViewById(R.id.button_cart);
+
+        chart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Pesanan = new Intent(MainActivity.this, Pesanan.class);
+                startActivity(Pesanan);
+            }
+        });
 
         lokasi.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.TextureView;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.google.firebase.database.DataSnapshot;
@@ -39,6 +41,13 @@ public class FoodDetail extends AppCompatActivity {
         //init view
         numberButton = (ElegantNumberButton) findViewById(R.id.jumlah_menu);
         btnSubmit = (Button) findViewById(R.id.buttonpesan);
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FoodDetail.this, "Pesanan diterima, Silahkan Cek Keranjang Belanja", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Intent intent = getIntent();
         harga = intent.getStringExtra("Harga");
