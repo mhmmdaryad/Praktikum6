@@ -7,10 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
     int kopi = 1, kentang = 2, roti = 3, martabak = 4, boba = 5;
-    Button btnkopi, btnkentang, btnroti, btnmartabak, btnboba;
+    LinearLayout btnkopi, btnkentang, btnroti, btnmartabak, btnboba;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -18,50 +19,50 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnkopi = (Button) findViewById(R.id.coffe);
-        btnkentang = (Button) findViewById(R.id.kentang);
-        btnroti = (Button) findViewById(R.id.roti);
-        btnmartabak = (Button) findViewById(R.id.martabak);
-        btnboba = (Button) findViewById(R.id.boba);
+        btnkopi = (LinearLayout) findViewById(R.id.coffe);
+        btnkentang = (LinearLayout) findViewById(R.id.kentang);
+        btnroti = (LinearLayout) findViewById(R.id.roti);
+        btnmartabak = (LinearLayout) findViewById(R.id.martabak);
+        btnboba = (LinearLayout) findViewById(R.id.boba);
 
         btnkopi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
+                Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", kopi);
+                foodDetail.putExtra("FoodId", 1);
             }
         });
         btnkentang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
+                Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", kentang);
+                foodDetail.putExtra("FoodId", 2);
             }
         });
         btnroti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
+                Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", roti);
+                foodDetail.putExtra("FoodId", 3);
             }
         });
         btnmartabak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
+                Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", martabak);
+                foodDetail.putExtra("FoodId", 4);
             }
         });
         btnboba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
+                Intent foodDetail = new Intent(MainActivity.this, FoodDetail.class);
                 startActivity(foodDetail);
-                foodDetail.putExtra("FoodId", boba);
+                foodDetail.putExtra("FoodId", 5);
             }
         });
 

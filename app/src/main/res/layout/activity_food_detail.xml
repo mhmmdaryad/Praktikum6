@@ -40,7 +40,6 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             app:cardCornerRadius="300dp"
-            app:cardBackgroundColor="@drawable/roundedbuttongold"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             >

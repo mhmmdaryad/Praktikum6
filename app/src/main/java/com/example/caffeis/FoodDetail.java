@@ -48,7 +48,7 @@ public class FoodDetail extends AppCompatActivity {
 
         if (getIntent()!= null){
             foodId=getIntent().getStringExtra("FoodId");
-            if(!foodId.isEmpty()){
+            if(foodId!=null){
                 getDetailFood(foodId);
             }
         }
